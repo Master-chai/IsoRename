@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+ <PropertyGroup>
+  <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework>
+  <UseWPF>true</UseWPF><EnableWindowsTargeting>true</EnableWindowsTargeting>
+  <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings>
+  <AssemblyName>IsoRename</AssemblyName><Version>1.0.0</Version><Product>ISO 图纸归档</Product>
+  <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+  <EnableCompressionInSingleFile Condition="'$(PublishSingleFile)' == 'true'">true</EnableCompressionInSingleFile>
+ </PropertyGroup>
+ <ItemGroup><PackageReference Include="PdfPig" Version="0.1.16" /></ItemGroup>
+ <ItemGroup><Compile Remove="checks/**/*.cs"/></ItemGroup>
+</Project>
